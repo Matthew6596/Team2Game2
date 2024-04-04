@@ -1,112 +1,314 @@
 fileFormatVersion: 2
 guid: d7a04e426e4b9f24483eb0d3909ae2fe
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: LowManHead
-    100002: LowManHead_end
-    100004: LowManHips
-    100006: LowManLeftArm
-    100008: LowManLeftFoot
-    100010: LowManLeftForeArm
-    100012: LowManLeftHand
-    100014: LowManLeftHandMiddle1
-    100016: LowManLeftHandMiddle2
-    100018: LowManLeftHandMiddle2_end
-    100020: LowManLeftHandThumb1
-    100022: LowManLeftHandThumb1_end
-    100024: LowManLeftLeg
-    100026: LowManLeftShoulder
-    100028: LowManLeftToeBase
-    100030: LowManLeftToeBase_end
-    100032: LowManLeftUpLeg
-    100034: LowManNeck
-    100036: LowManRightArm
-    100038: LowManRightFoot
-    100040: LowManRightForeArm
-    100042: LowManRightHand
-    100044: LowManRightHandMiddle1
-    100046: LowManRightHandMiddle2
-    100048: LowManRightHandMiddle2_end
-    100050: LowManRightHandThumb1
-    100052: LowManRightHandThumb1_end
-    100054: LowManRightLeg
-    100056: LowManRightShoulder
-    100058: LowManRightToeBase
-    100060: LowManRightToeBase_end
-    100062: LowManRightUpLeg
-    100064: LowManSpine
-    100066: LowManSpine1
-    100068: LowManSpine2
-    100070: Spectre
-    100072: //RootNode
-    100074: Spectre Mesh
-    100076: Spectre Mesh 1
-    100078: Spectre Mesh 2
-    100080: Spectre Mesh 3
-    100082: Spectre Mesh 4
-    100084: Spectre Mesh 5
-    400000: LowManHead
-    400002: LowManHead_end
-    400004: LowManHips
-    400006: LowManLeftArm
-    400008: LowManLeftFoot
-    400010: LowManLeftForeArm
-    400012: LowManLeftHand
-    400014: LowManLeftHandMiddle1
-    400016: LowManLeftHandMiddle2
-    400018: LowManLeftHandMiddle2_end
-    400020: LowManLeftHandThumb1
-    400022: LowManLeftHandThumb1_end
-    400024: LowManLeftLeg
-    400026: LowManLeftShoulder
-    400028: LowManLeftToeBase
-    400030: LowManLeftToeBase_end
-    400032: LowManLeftUpLeg
-    400034: LowManNeck
-    400036: LowManRightArm
-    400038: LowManRightFoot
-    400040: LowManRightForeArm
-    400042: LowManRightHand
-    400044: LowManRightHandMiddle1
-    400046: LowManRightHandMiddle2
-    400048: LowManRightHandMiddle2_end
-    400050: LowManRightHandThumb1
-    400052: LowManRightHandThumb1_end
-    400054: LowManRightLeg
-    400056: LowManRightShoulder
-    400058: LowManRightToeBase
-    400060: LowManRightToeBase_end
-    400062: LowManRightUpLeg
-    400064: LowManSpine
-    400066: LowManSpine1
-    400068: LowManSpine2
-    400070: //RootNode
-    400072: Spectre
-    400074: Spectre Mesh
-    400076: Spectre Mesh 1
-    400078: Spectre Mesh 2
-    400080: Spectre Mesh 3
-    400082: Spectre Mesh 4
-    400084: Spectre Mesh 5
-    2100000: MazeLowMan
-    4300000: Spectre Mesh
-    4300002: Spectre Mesh 1
-    4300004: Spectre Mesh 2
-    4300006: Spectre Mesh 3
-    4300008: Spectre Mesh 4
-    4300010: Spectre Mesh 5
-    9500000: //RootNode
-    13700000: Spectre Mesh
-    13700002: Spectre Mesh 1
-    13700004: Spectre Mesh 2
-    13700006: Spectre Mesh 3
-    13700008: Spectre Mesh 4
-    13700010: Spectre Mesh 5
-    2186277476908879412: ImportLogs
+  serializedVersion: 22200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: LowManHead
+  - first:
+      1: 100002
+    second: LowManHead_end
+  - first:
+      1: 100004
+    second: LowManHips
+  - first:
+      1: 100006
+    second: LowManLeftArm
+  - first:
+      1: 100008
+    second: LowManLeftFoot
+  - first:
+      1: 100010
+    second: LowManLeftForeArm
+  - first:
+      1: 100012
+    second: LowManLeftHand
+  - first:
+      1: 100014
+    second: LowManLeftHandMiddle1
+  - first:
+      1: 100016
+    second: LowManLeftHandMiddle2
+  - first:
+      1: 100018
+    second: LowManLeftHandMiddle2_end
+  - first:
+      1: 100020
+    second: LowManLeftHandThumb1
+  - first:
+      1: 100022
+    second: LowManLeftHandThumb1_end
+  - first:
+      1: 100024
+    second: LowManLeftLeg
+  - first:
+      1: 100026
+    second: LowManLeftShoulder
+  - first:
+      1: 100028
+    second: LowManLeftToeBase
+  - first:
+      1: 100030
+    second: LowManLeftToeBase_end
+  - first:
+      1: 100032
+    second: LowManLeftUpLeg
+  - first:
+      1: 100034
+    second: LowManNeck
+  - first:
+      1: 100036
+    second: LowManRightArm
+  - first:
+      1: 100038
+    second: LowManRightFoot
+  - first:
+      1: 100040
+    second: LowManRightForeArm
+  - first:
+      1: 100042
+    second: LowManRightHand
+  - first:
+      1: 100044
+    second: LowManRightHandMiddle1
+  - first:
+      1: 100046
+    second: LowManRightHandMiddle2
+  - first:
+      1: 100048
+    second: LowManRightHandMiddle2_end
+  - first:
+      1: 100050
+    second: LowManRightHandThumb1
+  - first:
+      1: 100052
+    second: LowManRightHandThumb1_end
+  - first:
+      1: 100054
+    second: LowManRightLeg
+  - first:
+      1: 100056
+    second: LowManRightShoulder
+  - first:
+      1: 100058
+    second: LowManRightToeBase
+  - first:
+      1: 100060
+    second: LowManRightToeBase_end
+  - first:
+      1: 100062
+    second: LowManRightUpLeg
+  - first:
+      1: 100064
+    second: LowManSpine
+  - first:
+      1: 100066
+    second: LowManSpine1
+  - first:
+      1: 100068
+    second: LowManSpine2
+  - first:
+      1: 100070
+    second: Spectre
+  - first:
+      1: 100072
+    second: //RootNode
+  - first:
+      1: 100074
+    second: Spectre Mesh
+  - first:
+      1: 100076
+    second: Spectre Mesh 1
+  - first:
+      1: 100078
+    second: Spectre Mesh 2
+  - first:
+      1: 100080
+    second: Spectre Mesh 3
+  - first:
+      1: 100082
+    second: Spectre Mesh 4
+  - first:
+      1: 100084
+    second: Spectre Mesh 5
+  - first:
+      4: 400000
+    second: LowManHead
+  - first:
+      4: 400002
+    second: LowManHead_end
+  - first:
+      4: 400004
+    second: LowManHips
+  - first:
+      4: 400006
+    second: LowManLeftArm
+  - first:
+      4: 400008
+    second: LowManLeftFoot
+  - first:
+      4: 400010
+    second: LowManLeftForeArm
+  - first:
+      4: 400012
+    second: LowManLeftHand
+  - first:
+      4: 400014
+    second: LowManLeftHandMiddle1
+  - first:
+      4: 400016
+    second: LowManLeftHandMiddle2
+  - first:
+      4: 400018
+    second: LowManLeftHandMiddle2_end
+  - first:
+      4: 400020
+    second: LowManLeftHandThumb1
+  - first:
+      4: 400022
+    second: LowManLeftHandThumb1_end
+  - first:
+      4: 400024
+    second: LowManLeftLeg
+  - first:
+      4: 400026
+    second: LowManLeftShoulder
+  - first:
+      4: 400028
+    second: LowManLeftToeBase
+  - first:
+      4: 400030
+    second: LowManLeftToeBase_end
+  - first:
+      4: 400032
+    second: LowManLeftUpLeg
+  - first:
+      4: 400034
+    second: LowManNeck
+  - first:
+      4: 400036
+    second: LowManRightArm
+  - first:
+      4: 400038
+    second: LowManRightFoot
+  - first:
+      4: 400040
+    second: LowManRightForeArm
+  - first:
+      4: 400042
+    second: LowManRightHand
+  - first:
+      4: 400044
+    second: LowManRightHandMiddle1
+  - first:
+      4: 400046
+    second: LowManRightHandMiddle2
+  - first:
+      4: 400048
+    second: LowManRightHandMiddle2_end
+  - first:
+      4: 400050
+    second: LowManRightHandThumb1
+  - first:
+      4: 400052
+    second: LowManRightHandThumb1_end
+  - first:
+      4: 400054
+    second: LowManRightLeg
+  - first:
+      4: 400056
+    second: LowManRightShoulder
+  - first:
+      4: 400058
+    second: LowManRightToeBase
+  - first:
+      4: 400060
+    second: LowManRightToeBase_end
+  - first:
+      4: 400062
+    second: LowManRightUpLeg
+  - first:
+      4: 400064
+    second: LowManSpine
+  - first:
+      4: 400066
+    second: LowManSpine1
+  - first:
+      4: 400068
+    second: LowManSpine2
+  - first:
+      4: 400070
+    second: //RootNode
+  - first:
+      4: 400072
+    second: Spectre
+  - first:
+      4: 400074
+    second: Spectre Mesh
+  - first:
+      4: 400076
+    second: Spectre Mesh 1
+  - first:
+      4: 400078
+    second: Spectre Mesh 2
+  - first:
+      4: 400080
+    second: Spectre Mesh 3
+  - first:
+      4: 400082
+    second: Spectre Mesh 4
+  - first:
+      4: 400084
+    second: Spectre Mesh 5
+  - first:
+      21: 2100000
+    second: MazeLowMan
+  - first:
+      43: 4300000
+    second: Spectre Mesh
+  - first:
+      43: 4300002
+    second: Spectre Mesh 1
+  - first:
+      43: 4300004
+    second: Spectre Mesh 2
+  - first:
+      43: 4300006
+    second: Spectre Mesh 3
+  - first:
+      43: 4300008
+    second: Spectre Mesh 4
+  - first:
+      43: 4300010
+    second: Spectre Mesh 5
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Spectre Mesh
+  - first:
+      137: 13700002
+    second: Spectre Mesh 1
+  - first:
+      137: 13700004
+    second: Spectre Mesh 2
+  - first:
+      137: 13700006
+    second: Spectre Mesh 3
+  - first:
+      137: 13700008
+    second: Spectre Mesh 4
+  - first:
+      137: 13700010
+    second: Spectre Mesh 5
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
   externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -115,6 +317,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -139,25 +342,36 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -166,10 +380,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human:
     - boneName: LowManHips
       humanName: Hips
@@ -565,13 +779,19 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
