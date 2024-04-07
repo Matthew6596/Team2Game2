@@ -46,16 +46,25 @@ public class PlayerChipThrow : MonoBehaviour
         if (ctx.performed)
         {
             //Create chip
-            GameObject chip = Instantiate(chipPrefab,chipSpawn);
+            GameObject chip = Instantiate(chipPrefab,chipSpawn.position,Quaternion.identity);
 
             //Throw chip
             Vector3 _force = MouseWorldPos- gameObject.transform.position;
             chip.GetComponent<Rigidbody>().AddForce(_force, ForceMode.Impulse);
+
+            StartCoroutine(RemoveChip(chip));
+
         }
     }
     private void OnDrawGizmos() //Debug for mouse world position
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(MouseWorldPos, 0.25f);
+    }
+
+    IEnumerator RemoveChip(GameObject chip)
+    {
+        yield return new WaitForSeconds(5f);
+        if (chip != null) Destroy(chip);
     }
 }
