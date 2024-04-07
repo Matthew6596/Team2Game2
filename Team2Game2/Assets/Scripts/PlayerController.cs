@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 10.0f;
+    public float speed = 8.0f;
     public float jumpStrength = -10.0f;
     public float gravity = -9.8f;
     public float gravityMultiplier = 3.0f;
@@ -32,13 +32,25 @@ public class PlayerController : MonoBehaviour
             Jump();
         }
 
-        velocity += gravity * gravityMultiplier * Time.deltaTime;
+        if (IsGrounded() && velocity < 0)
+        {
+            velocity = -1;
+        }
+        else
+        {
+            velocity += gravity * gravityMultiplier * Time.deltaTime;
+        }
 
         movement.y = velocity;
 
         movement *= Time.deltaTime;
         movement = transform.TransformDirection(movement);
         characterController.Move(movement);
+    }
+
+    bool IsGrounded()
+    {
+        return characterController.isGrounded;
     }
 
     public void Jump()
