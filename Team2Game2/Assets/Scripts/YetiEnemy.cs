@@ -7,13 +7,21 @@ public class YetiEnemy : MonoBehaviour
     public GameObject target;
     public float speed;
 
+    public GameObject hungerIndicatorPrefab;
     public int hunger = 1;
+
+    Transform hungerPanel;
 
     // Start is called before the first frame update
     void Start()
     {
         if (target == null)
             target = GameObject.Find("Player");
+
+        //Create hunger UI
+        hungerPanel = transform.GetChild(2).GetChild(0);
+        for(int i=0; i<hunger; i++)
+            Instantiate(hungerIndicatorPrefab,hungerPanel);
     }
 
     // Update is called once per frame
@@ -31,6 +39,7 @@ public class YetiEnemy : MonoBehaviour
         {
             Destroy(collision.gameObject);
             hunger--;
+            Destroy(hungerPanel.GetChild(0).gameObject);
             if (hunger <= 0) //Number of chips needed to sway yeti
                 becomeFriendly();
         }
