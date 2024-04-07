@@ -22,8 +22,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         float moveZ = Input.GetAxis("Horizontal") * speed;
-        float moveX = Input.GetAxis("Vertical") * speed;
-        Vector3 movement = new Vector3(moveX, 0, moveZ);
+        //float moveX = Input.GetAxis("Vertical") * speed;
+        //Vector3 movement = new Vector3(moveX, 0, moveZ);
+        Vector3 movement = new Vector3(0, 0, moveZ);
 
         movement = Vector3.ClampMagnitude(movement, speed);
 
