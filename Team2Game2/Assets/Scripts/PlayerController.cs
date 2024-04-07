@@ -28,11 +28,6 @@ public class PlayerController : MonoBehaviour
 
         movement = Vector3.ClampMagnitude(movement, speed);
 
-        if (Input.GetButtonDown("Jump"))
-        {
-            Jump();
-        }
-
         if (IsGrounded() && velocity < 0)
         {
             velocity = -1;
@@ -40,6 +35,11 @@ public class PlayerController : MonoBehaviour
         else
         {
             velocity += gravity * gravityMultiplier * Time.deltaTime;
+        }
+
+        if (Input.GetButtonDown("Jump") && IsGrounded())
+        {
+            Jump();
         }
 
         movement.y = velocity;
