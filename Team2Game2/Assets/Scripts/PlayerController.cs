@@ -22,6 +22,16 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         float moveZ = Input.GetAxis("Horizontal") * speed;
+        //Flip Player
+        if(moveZ < 0)
+        {
+            //gameObject.transform.Rotate(0, -90, 0); //this is going to cause problems
+        }
+        else
+        {
+            //gameObject.transform.Rotate(0, 90, 0);
+        }
+
         //float moveX = Input.GetAxis("Vertical") * speed;
         //Vector3 movement = new Vector3(moveX, 0, moveZ);
         Vector3 movement = new Vector3(0, 0, moveZ);
