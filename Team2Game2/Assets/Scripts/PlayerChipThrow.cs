@@ -43,7 +43,7 @@ public class PlayerChipThrow : MonoBehaviour
     }
     public void MouseClicked(InputAction.CallbackContext ctx)
     {
-        if (ctx.performed)
+        if (ctx.performed && canThrow)
         {
             //Create chip
             GameObject chip = Instantiate(chipPrefab,chipSpawn.position,Quaternion.identity);
@@ -53,7 +53,7 @@ public class PlayerChipThrow : MonoBehaviour
             chip.GetComponent<Rigidbody>().AddForce(_force, ForceMode.Impulse);
 
             StartCoroutine(RemoveChip(chip));
-
+            StartCoroutine(ChipThrowCooldown());
         }
     }
     private void OnDrawGizmos() //Debug for mouse world position
@@ -66,5 +66,13 @@ public class PlayerChipThrow : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         if (chip != null) Destroy(chip);
+    }
+    float cooldown = 0.25f;
+    bool canThrow = true;
+    IEnumerator ChipThrowCooldown()
+    {
+        canThrow = false;
+        yield return new WaitForSeconds(cooldown);
+        canThrow = true;
     }
 }

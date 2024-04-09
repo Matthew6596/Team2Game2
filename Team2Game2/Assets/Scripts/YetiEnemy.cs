@@ -29,8 +29,7 @@ public class YetiEnemy : MonoBehaviour
     {
         //Chase target
         transform.LookAt(target.transform);
-        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
-        transform.position = Vector3.MoveTowards(transform.position,target.transform.position,speed*Time.deltaTime);
+        transform.SetPositionAndRotation(Vector3.MoveTowards(transform.position,target.transform.position,speed*Time.deltaTime), Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0));
     }
 
     private void OnCollisionEnter(Collision collision)
