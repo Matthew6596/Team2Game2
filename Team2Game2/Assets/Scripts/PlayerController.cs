@@ -39,7 +39,6 @@ public class PlayerController : MonoBehaviour
         if (moveZ > 0)
         {
             //Do not flip player
-            Debug.Log(moveZ);
             model.transform.rotation = Quaternion.Euler(0, 90, 0);
         }
 
