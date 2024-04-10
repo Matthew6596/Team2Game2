@@ -65,7 +65,7 @@ public class YetiEnemy : MonoBehaviour
         YetiFriend yay = gameObject.AddComponent<YetiFriend>();
         yay.speed = speed;
         yay.target = target;
-        yay.player = GameObject.Find("Player").transform;
+        //yay.player = GameObject.Find("Player").transform;
         gameObject.tag = "Friend";
         gameObject.GetComponent<CapsuleCollider>().excludeLayers = playerLayer;
 
