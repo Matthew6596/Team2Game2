@@ -673,7 +673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a41f4e3ff5ad3c940a13f79ca440a08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 2
+  spawnRate: 1
   yetiPrefab: {fileID: 7128542727611464263, guid: 6b9ecfd7f2cbc37428a3a9fa803b9b86, type: 3}
   numberOfSpawns: 3
 --- !u!1 &363479535 stripped
@@ -1609,7 +1609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a41f4e3ff5ad3c940a13f79ca440a08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 2
+  spawnRate: 1
   yetiPrefab: {fileID: 7128542727611464263, guid: 6b9ecfd7f2cbc37428a3a9fa803b9b86, type: 3}
   numberOfSpawns: 3
 --- !u!43 &511404556
@@ -1990,7 +1990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a41f4e3ff5ad3c940a13f79ca440a08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 2
+  spawnRate: 1
   yetiPrefab: {fileID: 7128542727611464263, guid: 6b9ecfd7f2cbc37428a3a9fa803b9b86, type: 3}
   numberOfSpawns: 3
 --- !u!1 &595484451
