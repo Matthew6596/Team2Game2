@@ -6,7 +6,7 @@ public class YetiFriend : MonoBehaviour
 {
     public GameObject target;
     public float speed;
-    public Transform player;
+    //public Transform player;
 
     void Update()
     {
@@ -22,6 +22,6 @@ public class YetiFriend : MonoBehaviour
 
     public void teleportBehindPlayer()
     {
-        transform.position = new Vector3(player.position.x - 1, transform.position.y, transform.position.z);
+        transform.position = new Vector3(target.transform.position.x - 5, transform.position.y, transform.position.z);
     }
 }

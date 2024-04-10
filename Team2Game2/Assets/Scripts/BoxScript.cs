@@ -26,5 +26,10 @@ public class BoxScript : MonoBehaviour
             Debug.Log("Contact!");
             box.transform.position += new Vector3(pushingPower,0,0);
         }
+        Debug.Log("bruh");
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("bruh! " + collision.gameObject.name);
     }
 }
