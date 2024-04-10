@@ -28,7 +28,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3266763217647025137}
+  m_Father: {fileID: 7710588309117235815}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6667037408950120003
@@ -66,9 +66,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7710588309117235815}
-  - {fileID: 7861087992744822231}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &5868876289830936630
 MonoBehaviour:
@@ -369,7 +368,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 77cb454dfc2c98441ae752b73a6a8382, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7861087992744822231}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77cb454dfc2c98441ae752b73a6a8382, type: 3}
 --- !u!4 &7710588309117235815 stripped
