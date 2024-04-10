@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,7 +9,13 @@ public class PlayerController : MonoBehaviour
     public float jumpStrength = -10.0f;
     public float gravity = -9.8f;
     public float gravityMultiplier = 3.0f;
+
+    public GameObject model;
+    bool isFlipped = false;
+
     float velocity = 1;
+
+    Animator anim;
 
     CharacterController characterController;
 
@@ -16,6 +23,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -25,16 +33,30 @@ public class PlayerController : MonoBehaviour
         //Flip Player
         if(moveZ < 0)
         {
-            //gameObject.transform.Rotate(0, -90, 0); //this is going to cause problems
+            //Flip player
+            Debug.Log(moveZ);
+            StartCoroutine(FlipPlayer());
         }
-        else
+        if (moveZ > 0 && isFlipped)
         {
-            //gameObject.transform.Rotate(0, 90, 0);
+            //Do not flip player
+            Debug.Log(moveZ);
+            model.transform.Rotate(0, 180, 0);
+            isFlipped = false;
         }
 
         //float moveX = Input.GetAxis("Vertical") * speed;
         //Vector3 movement = new Vector3(moveX, 0, moveZ);
         Vector3 movement = new Vector3(0, 0, moveZ);
+
+        if(movement != new Vector3(0,0,0))
+        {
+            anim.SetBool("isWalking", true);
+        }
+        else
+        {
+            anim.SetBool("isWalking", false);
+        }
 
         movement = Vector3.ClampMagnitude(movement, speed);
 
@@ -67,5 +89,13 @@ public class PlayerController : MonoBehaviour
     public void Jump()
     {
         velocity *= jumpStrength;
+    }
+
+    IEnumerator FlipPlayer()
+    {
+        //model.transform.rotation = Quaternion.Euler(0,180,0);
+        isFlipped = true;
+        model.transform.Rotate(0, 180, 0);
+        yield return new WaitForSeconds(1.0f);
     }
 }
