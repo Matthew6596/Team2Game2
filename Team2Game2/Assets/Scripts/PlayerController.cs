@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public float gravityMultiplier = 3.0f;
 
     public GameObject model;
-    bool isFlipped = false;
+    //bool isFlipped = false;
 
     float velocity = 1;
 
