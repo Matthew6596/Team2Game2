@@ -21,7 +21,13 @@ public class BoxScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        float boxX = box.transform.position.x;
+        float boxY = box.transform.position.y;
+
+        if(box.transform.position.z != 45)
+        {
+            box.transform.position.Set(boxX,boxY,45);
+        }
     }
 
     private void OnTriggerStay(Collider other)
