@@ -34,15 +34,12 @@ public class PlayerController : MonoBehaviour
         if(moveZ < 0)
         {
             //Flip player
-            Debug.Log(moveZ);
-            StartCoroutine(FlipPlayer());
+            model.transform.rotation = Quaternion.Euler(0, -90, 0);
         }
-        if (moveZ > 0 && isFlipped)
+        if (moveZ > 0)
         {
             //Do not flip player
-            Debug.Log(moveZ);
-            model.transform.Rotate(0, 180, 0);
-            isFlipped = false;
+            model.transform.rotation = Quaternion.Euler(0, 90, 0);
         }
 
         //float moveX = Input.GetAxis("Vertical") * speed;
@@ -91,11 +88,4 @@ public class PlayerController : MonoBehaviour
         velocity *= jumpStrength;
     }
 
-    IEnumerator FlipPlayer()
-    {
-        //model.transform.rotation = Quaternion.Euler(0,180,0);
-        isFlipped = true;
-        model.transform.Rotate(0, 180, 0);
-        yield return new WaitForSeconds(1.0f);
-    }
 }
