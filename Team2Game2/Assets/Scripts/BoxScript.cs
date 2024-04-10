@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
+using UnityEngine.SceneManagement;
 
 public class BoxScript : MonoBehaviour
 {
@@ -45,5 +46,13 @@ public class BoxScript : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("bruh! " + collision.gameObject.name);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if ((other.CompareTag("Finish")))
+        {
+            SceneManager.LoadScene("WinScene");
+        }
     }
 }
