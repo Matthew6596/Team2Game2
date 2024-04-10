@@ -12,6 +12,8 @@ public class YetiEnemy : MonoBehaviour
 
     Transform hungerPanel;
 
+    public LayerMask playerLayer;
+
     bool active = false;
 
     // Start is called before the first frame update
@@ -52,6 +54,7 @@ public class YetiEnemy : MonoBehaviour
     {
         if (other.gameObject==target)
         {
+            Destroy(GetComponent<SphereCollider>());
             active = true;
         }
     }
@@ -61,8 +64,16 @@ public class YetiEnemy : MonoBehaviour
         //Add friend script to yeti
         YetiFriend yay = gameObject.AddComponent<YetiFriend>();
         yay.speed = speed;
+        yay.target = target;
+        yay.player = GameObject.Find("Player").transform;
+        gameObject.tag = "Friend";
+        gameObject.GetComponent<CapsuleCollider>().excludeLayers = playerLayer;
+
+        //teleport behind player
+        yay.teleportBehindPlayer();
 
         //done, remove enemy script from yeti
+        Destroy(hungerPanel.gameObject);
         Destroy(this);
     }
 }
