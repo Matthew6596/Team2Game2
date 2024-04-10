@@ -22,7 +22,7 @@ public class CameraFollow : MonoBehaviour
         float dist = Vector3.Distance(transform.position, targetPosition);
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, movementSmoothing * dist);
 
-        transform.LookAt(cameraTarget);
+        //transform.LookAt(cameraTarget);
     }
 
     void setTargetPosition()
