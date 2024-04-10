@@ -49,7 +49,7 @@ public class PlayerChipThrow : MonoBehaviour
             GameObject chip = Instantiate(chipPrefab,chipSpawn.position,Quaternion.identity);
 
             //Throw chip
-            Vector3 _force = MouseWorldPos- gameObject.transform.position;
+            Vector3 _force = (MouseWorldPos- gameObject.transform.position)*1.5f;
             chip.GetComponent<Rigidbody>().AddForce(_force, ForceMode.Impulse);
 
             StartCoroutine(RemoveChip(chip));

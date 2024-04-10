@@ -6,16 +6,22 @@ public class YetiFriend : MonoBehaviour
 {
     public GameObject target;
     public float speed;
+    public Transform player;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        //Chase target
+        transform.LookAt(target.transform);
+        transform.SetPositionAndRotation(Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime), Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0));
+
+        if (transform.position.x > target.transform.position.x)
+        {
+            teleportBehindPlayer();
+        }
+    }
+
+    public void teleportBehindPlayer()
+    {
+        transform.position = new Vector3(player.position.x - 1, transform.position.y, transform.position.z);
     }
 }
