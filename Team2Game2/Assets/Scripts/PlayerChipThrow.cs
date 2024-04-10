@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Animations;
 
 public class PlayerChipThrow : MonoBehaviour
 {
@@ -11,6 +12,13 @@ public class PlayerChipThrow : MonoBehaviour
 
     Vector3 MousePos;
     Vector3 MouseWorldPos;
+
+    Animator playerAnim;
+
+    private void Start()
+    {
+        playerAnim = GameObject.Find("Player").GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -45,6 +53,9 @@ public class PlayerChipThrow : MonoBehaviour
     {
         if (ctx.performed && canThrow)
         {
+            //Throw anim
+            playerAnim.SetTrigger("throw");
+
             //Create chip
             GameObject chip = Instantiate(chipPrefab,chipSpawn.position,Quaternion.identity);
 
